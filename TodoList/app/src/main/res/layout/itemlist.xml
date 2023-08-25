@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:backgroundTint="#DDCFFF"
+    android:backgroundTint="#F1EBFF"
     android:padding="20dp"
     android:text="textView"
     android:textSize="20dp"

@@ -12,20 +12,22 @@
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:orientation="horizontal"
-    android:layout_alignParentBottom="true">
+    android:layout_alignParentBottom="true"
+
+    >
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="match_parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/add_btn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:backgroundTint="#9175D8"
         android:text="추가"
         android:textColor="#000000"
-        android:backgroundTint="#9175D8"
         android:textSize="16sp" />
 </LinearLayout>
 
