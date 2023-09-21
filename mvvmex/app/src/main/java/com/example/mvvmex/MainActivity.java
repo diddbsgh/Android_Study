@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 
@@ -18,24 +19,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //ViewModel 초기화
         viewModel = new ViewModelProvider(this).get(CounterViewModel.class);
 
         TextView tvNumber = findViewById(R.id.tv_number);
         Button btnIncrease = findViewById(R.id.btn_increase);
 
-        //Button 클릭 -> ViewModel에서 count 증가
+        //LiveData로 TextView 업데이트
+        viewModel.getCountLiveData().observe(this, new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer count) {
+                tvNumber.setText(String.valueOf(count));
+            }
+        });
+
+
+        //Button 클릭 -> ViewModel 카운터 증가
         btnIncrease.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 viewModel.incrementCount();
-                updateTextView(tvNumber);
             }
         });
+
     }
 
-    private void updateTextView(TextView textView) {
-        // ViewModel에서 가져온 숫자를 TextView에 설정
-        textView.setText(String.valueOf(viewModel.getCount()));
-    }
+
+
 }
