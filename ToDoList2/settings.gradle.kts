@@ -12,5 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "ListExample01"
-include ':app'
+
+rootProject.name = "ToDoList"
+include(":app")
+ 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <EditText
+        android:id="@+id/et_addTitle"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/text_border"
+        android:gravity="center"
+        android:hint="제목 입력"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_addContent"
+        android:layout_width="0dp"
+        android:layout_height="480dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/text_border"
+        android:gravity="center"
+        android:hint="할 일 입력"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_addTitle" />
+
+    <TextView
+        android:id="@+id/tv_selectColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="색 선택"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_addContent" />
+
+    <RadioGroup
+        android:id="@+id/rg_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selectColor"
+        android:layout_marginTop="5dp">
+
+        <RadioButton
+            android:id="@+id/rb_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RED"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="YELLOW"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="GREEN"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="BLUE"
+            android:textSize="15sp" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_color" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
