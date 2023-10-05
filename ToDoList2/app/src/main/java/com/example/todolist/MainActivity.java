@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import com.example.todolist.databinding.ActivityMainBinding;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;  // Binding 객체 선언
+    private List<ItemModel> itemList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
